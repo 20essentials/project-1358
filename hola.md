@@ -1,3 +1,4 @@
+
 # 🚀 Turbopack Tracing in Next.js
 
 This guide explains how to enable and use **Turbopack tracing** to analyze your application's performance during local development in **Next.js 16**.
@@ -24,13 +25,11 @@ To generate a trace, run your development server with the environment variable:
 NEXT_TURBOPACK_TRACING=1
 
 On Linux/macOS:
-
 ```bash
 NEXT_TURBOPACK_TRACING=1 npm run dev
 ```
 
 On Windows (PowerShell):
-
 ```bash
 $env:NEXT_TURBOPACK_TRACING=1; npm run dev
 ```
@@ -59,6 +58,7 @@ You will now have a file named:
 
 .next/dev/trace-turbopack
 
+
 Note: If you are using isolatedDevBuild in next.config.js, the location may change.
 
 5️⃣ Analyze the Trace
@@ -66,6 +66,7 @@ Note: If you are using isolatedDevBuild in next.config.js, the location may chan
 To interpret the trace file:
 
 npx next internal trace .next/dev/trace-turbopack
+
 
 In older Next.js versions, the command was turbo-trace-server.
 
@@ -76,12 +77,3 @@ http://localhost:PORT
 Viewing the Trace in Next.js UI
 
 By default, the view shows aggregated timings (“Aggregated in order”)
-
-[![Foto Preview](preview/trace-turbopack.avif)](https://project-1327.vercel.app/)
-[![Foto Preview](preview/project-1327.avif)](https://project-1327.vercel.app/)
-
-<div align="center" style="display: flex; justify-content: center;">
-  <a  href="https://github.com/20essentials/project-1327" target="_blank">&#8592;</a>
-  &nbsp;&nbsp;
-  <a  href="https://github.com/20essentials/project-1327" target="_blank">&#8594;</a>
-</div>
