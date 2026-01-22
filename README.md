@@ -8,13 +8,11 @@ This guide explains how to enable and use **Turbopack tracing** to analyze your 
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/20essentials/project-1358
 cd <your-repo-name>
 
 # Install dependencies
-npm install
-# or
-yarn install
+pnpm install
 ```
 
 2️⃣ Enable Turbopack Tracing
@@ -37,6 +35,8 @@ $env:NEXT_TURBOPACK_TRACING=1; npm run dev
 
 This will make Next.js generate a trace file while you navigate through your app or make changes to your files.
 
+---
+
 3️⃣ Reproduce the Activity You Want to Analyze
 
 While the development server is running:
@@ -49,6 +49,8 @@ Navigate between routes
 
 ✅ All these actions will be captured in the trace file.
 
+---
+
 4️⃣ Stop the Development Server
 
 Once you’re done interacting:
@@ -60,6 +62,8 @@ You will now have a file named:
 .next/dev/trace-turbopack
 
 Note: If you are using isolatedDevBuild in next.config.js, the location may change.
+
+---
 
 5️⃣ Analyze the Trace
 
@@ -76,6 +80,8 @@ http://localhost:PORT
 Viewing the Trace in Next.js UI
 
 By default, the view shows aggregated timings (“Aggregated in order”)
+
+---
 
 [![Foto Preview](preview/trace-turbopack.avif)](https://project-1358.vercel.app/)
 [![Foto Preview](preview/project-1358.avif)](https://project-1358.vercel.app/)
